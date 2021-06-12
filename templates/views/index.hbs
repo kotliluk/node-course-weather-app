@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Weather</title>
+        <link rel="icon" href="img/weather.png">
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+
+    <body>
+        <div class="main-content">
+            {{>header}}
+
+            <form id="weather-form">
+                <input id="weather-input" placeholder="Location" autofocus="true">
+                <button>Search</button>
+            </form>
+
+            <p id="p-1"></p>
+            <p id="p-2"></p>
+        </div>
+
+        {{>footer}}
+
+        <script src="js/app.js"> /* pokud se da na konec body, provede se az po renderu html - lze pristupovat k elementum */ </script>
+    </body>
+</html>
