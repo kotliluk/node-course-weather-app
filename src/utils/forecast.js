@@ -13,7 +13,7 @@ const forecast = (latitude, longitude, callback) => {
         }
         else {
             const pred = response.body.current
-            callback(undefined, `It is ${pred.temperature}, but it feels like ${pred.feelslike}.`)
+            callback(undefined, `It is ${pred.temperature}, it feels like ${pred.feelslike}. Wind speed is ${pred.wind_speed} km/h.`)
         }
     })
 }
