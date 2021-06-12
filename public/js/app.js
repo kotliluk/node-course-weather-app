@@ -8,8 +8,8 @@ form.addEventListener('submit', (e) => {
     e.preventDefault();
     p1.innerHTML = "Loading...";
     p2.innerHTML = "";
-    // fetch lze pouzit pouze z browseru
-    fetch('http://localhost:3000/weather?address=' + input.value)
+    // fetch lze pouzit pouze z browseru - pri predani pouze relativni adresy se pouzije aktualni (localhost pri vyvoji a opravdova pri deploy)
+    fetch('/weather?address=' + input.value)
         .then((res) => res.json())
         .then((data) => {
             if (data.error) {

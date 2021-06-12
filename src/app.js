@@ -6,6 +6,7 @@ const forecast = require('./utils/forecast');
 
 // vytvoreni serveru
 const app = express();
+const port = process.env.PORT || 3000;
 
 // zadani public slozky pro frontend - index.html se pristupuje defaultne na domain.com, ostatni file.html musi byt domain.com/file.html
 // v public slozce se tvori normalne fronted html, css, js...
@@ -102,6 +103,6 @@ app.get('*', (req, res) => {
 });
 
 // start serveru na portu 3000
-app.listen(3000, () => {
-    console.log("server is on")
+app.listen(port, () => {
+    console.log("server is on port " + port);
 });
